@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ingreso de Usuario</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    #loginForm {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    #loginForm input[type="text"],
+    #loginForm input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+
+    #loginForm button {
+      width: 100%;
+      padding: 10px;
+      background-color: skyblue;
+      color: white;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ingreso de Usuario</h1>
+  <form id="loginForm">
+    <input type="text" id="rfcInput" placeholder="RFC">
+    <input type="password" id="passwordInput" placeholder="Contraseña">
+    <button type="button" onclick="login()">Ingresar</button>
+  </form>
+
+  <script>
+    function login() {
+      var rfc = document.getElementById("rfcInput").value;
+      var password = document.getElementById("passwordInput").value;
+
+      // Aquí puedes agregar la lógica de autenticación con los datos ingresados
+      // por el usuario, como enviarlos a un servidor para verificar su validez.
+      // En este ejemplo, simplemente mostraremos los valores en una ventana emergente (alert).
+      
+      alert("RFC: " + rfc + "\nContraseña: " + password);
+    }
+  </script>
+</body>
+</html>
