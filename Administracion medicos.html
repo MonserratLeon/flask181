@@ -2,9 +2,16 @@
 <html>
 <head>
     <title>Admistracion medicos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         /* Estilos generales */
         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Estilos generales */{
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -86,7 +93,7 @@
         /* Estilos para la barra de información lateral */
         aside {
             background-color: #ffffcc; 
-            padding: 10px;
+            padding: 20px;
             width: 200px;
             float: left;
         }
@@ -120,6 +127,70 @@
         .info-section p {
             margin-bottom: 20px;
         }
+
+    h1 {
+      text-align: center;
+    }
+
+    h2 {
+      margin-top: 30px;
+    }
+
+    form {
+      margin-bottom: 20px;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    form input[type="text"],
+    form input[type="email"] {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+
+    button {
+      padding: 5px 10px;
+      margin-right: 5px;
+    }
+    /* Estilos generales */
+    body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Resto de estilos... */
+        
+        /* Estilos para la barra de información lateral */
+        aside {
+            background-color: #ffffcc; 
+            padding: 10px;
+            width: 200px;
+            float: right; /* Alinea el aside a la derecha */
+        }
+        
+        /* Estilos para la sección de información de prueba */
+        .info-section {
+            padding: 20px;
+            margin-right: 220px; /* Agrega un margen a la derecha para evitar superposiciones */
+        }
+        
     </style>
 </head>
 <body>
@@ -140,11 +211,8 @@
     <nav class="secondary-navigation">
         <ul>
             <li><a href="#">Medicos registrados</a></li>
-            <li><a href="#">Crear</a></li>
-            <li><a href="#">Leer</a></li>
-            <li><a href="#">Agregar</a></li>
-            <li><a href="#">Borrar</a></li>
-            <li><a href="#">Datos médicos</a></li>
+            <li><a href="#">Editar Medicos</a></li>
+            <li><a href="#">Datos Medico</a></li>
         </ul>
     </nav>
     
@@ -153,7 +221,7 @@
             <img src="ruta_de_la_imagen" alt="Foto de perfil">
         </div>
         
-        <h2>Información Personal</h2>
+        <h2>Información Medico</h2>
         <ul>
             <li>Nombre:</li>
             <li>Apellido Paterno:</li>
@@ -163,11 +231,70 @@
             <li>Correo:</li>
         </ul>
     </aside>
-    
-    <div class="info-section">
-        <h2>Información de Prueba</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempor mi nec enim tempor, non eleifend velit porta. Vivamus congue magna vitae leo commodo placerat. Integer tincidunt, mauris non bibendum cursus, enim orci efficitur urna, ut ultricies elit risus a ligula. Sed congue tristique ligula vel luctus. Fusce bibendum mauris id velit feugiat, ac mattis ipsum tristique. Duis fringilla ex eget est pharetra, ac aliquam felis sollicitudin.</p>
-        <p>Quisque sodales mauris felis, id pellentesque sem dignissim et. Mauris condimentum diam nec nisl consectetur, a mattis ligula faucibus. Praesent sit amet semper mi. Curabitur interdum ultrices neque, et laoreet lacus aliquet vitae. Mauris at nibh orci. Sed ultrices consectetur metus, sit amet sollicitudin erat lacinia vel.</p>
-    </div>
+    <section>
+        <div class="info-section">
+            <h2>Medicos registrados</h2>
+            <table>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Apellido Paterno</th>
+                  <th>Apellido Materno</th>
+                  <th>Correo</th>
+                  <th>REF</th>
+                  <th>Cédula</th>
+                </tr>
+                <tr>
+                  <td>John</td>
+                  <td>Doe</td>
+                  <td>Smith</td>
+                  <td>johndoe@example.com</td>
+                  <td>REF123</td>
+                  <td>1234567890</td>
+                </tr>
+                <tr>
+                  <td>Jane</td>
+                  <td>Smith</td>
+                  <td>Doe</td>
+                  <td>janesmith@example.com</td>
+                  <td>REF456</td>
+                  <td>0987654321</td>
+                </tr>
+                
+                  <tr>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>Smith</td>
+                    <td>johndoe@example.com</td>
+                    <td>REF123</td>
+                    <td>1234567890</td>
+                  </tr>
+                  <tr>
+                    <td>Jane</td>
+                    <td>Smith</td>
+                    <td>Doe</td>
+                    <td>janesmith@example.com</td>
+                    <td>REF456</td>
+                    <td>0987654321</td>
+                  </tr>
+                  <tr>
+                    <td>John</td>
+                    <td>Doe</td>
+                    <td>Smith</td>
+                    <td>johndoe@example.com</td>
+                    <td>REF123</td>
+                    <td>1234567890</td>
+                  </tr>
+                  <tr>
+                    <td>Jane</td>
+                    <td>Smith</td>
+                    <td>Doe</td>
+                    <td>janesmith@example.com</td>
+                    <td>REF456</td>
+                    <td>0987654321</td>
+                  </tr>
+                <!-- Agrega más filas según necesites -->
+              </table>
+           </div>
+        </section>
 </body>
 </html>

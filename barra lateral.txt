@@ -1,0 +1,13 @@
+ /* Estilos para la barra de información lateral */
+        aside {
+            background-color: #ffffcc; 
+            padding: 10px;
+            width: 200px;
+            float: right; /* Alinea el aside a la derecha */
+        }
+        
+        /* Estilos para la sección de información de prueba */
+        .info-section {
+            padding: 20px;
+            margin-right: 220px; /* Agrega un margen a la derecha para evitar superposiciones */
+        }
