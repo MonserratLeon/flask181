@@ -117,6 +117,23 @@
         .info-section p {
             margin-bottom: 20px;
         }
+        table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+    }
+    
+    th {
+      background-color: #f2f2f2;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
     </style>
 </head>
 <body>
@@ -143,26 +160,134 @@
         </ul>
     </nav>
     
-    <aside>
-        <div class="profile-picture">
-            <img src="ruta_de_la_imagen" alt="Foto de perfil">
-        </div>
-        
-        <h2>Información Personal</h2>
-        <ul>
-            <li>Nombre:</li>
-            <li>Apellido Paterno:</li>
-            <li>Apellido Materno:</li>
-            <li>RFC:</li>
-            <li>Número de Cédula:</li>
-            <li>Correo:</li>
-        </ul>
-    </aside>
-    
-    <div class="info-section">
-        <h2>Información de Prueba</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempor mi nec enim tempor, non eleifend velit porta. Vivamus congue magna vitae leo commodo placerat. Integer tincidunt, mauris non bibendum cursus, enim orci efficitur urna, ut ultricies elit risus a ligula. Sed congue tristique ligula vel luctus. Fusce bibendum mauris id velit feugiat, ac mattis ipsum tristique. Duis fringilla ex eget est pharetra, ac aliquam felis sollicitudin.</p>
-        <p>Quisque sodales mauris felis, id pellentesque sem dignissim et. Mauris condimentum diam nec nisl consectetur, a mattis ligula faucibus. Praesent sit amet semper mi. Curabitur interdum ultrices neque, et laoreet lacus aliquet vitae. Mauris at nibh orci. Sed ultrices consectetur metus, sit amet sollicitudin erat lacinia vel.</p>
-    </div>
+    <h1>Visualización de Registo de Pacientes</h1>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>N°</th>
+        <th>Nombre</th>
+        <th>Apellido Paterno</th>
+        <th>Apellido Materno</th>
+        <th>Fecha de Nacimiento</th>
+        <th>Nacionalidad</th>
+        <th>Sexo</th>
+        <th>CURP</th>
+        <th>Correo</th>
+        <th>Tipo de Sangre</th>
+        <th>Teléfono Celular</th>
+        <th>Dirección</th>
+        <th>Colonia</th>
+        <th>Código Postal</th>
+        <th>Entidad Federativa</th>
+        <th>Municipio</th>
+        <th>Estado</th>
+        <th>Médico que Atiende</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Juan</td>
+        <td>Pérez</td>
+        <td>Gómez</td>
+        <td>1985-07-15</td>
+        <td>Mexicana</td>
+        <td>Masculino</td>
+        <td>PERJ850715XXX</td>
+        <td>juan.perez@example.com</td>
+        <td>O+</td>
+        <td>5551234567</td>
+        <td>Calle 123</td>
+        <td>Colonia Centro</td>
+        <td>12345</td>
+        <td>Estado de México</td>
+        <td>Naucalpan</td>
+        <td>Estado de México</td>
+        <td>Dr. López</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>José</td>
+        <td>González</td>
+        <td>Rodríguez</td>
+        <td>1990-05-20</td>
+        <td>Mexicana</td>
+        <td>Masculino</td>
+        <td>GORJ900520XXX</td>
+        <td>jose.gonzalez@example.com</td>
+        <td>A-</td>
+        <td>5559876543</td>
+        <td>Calle 456</td>
+        <td>Colonia Norte</td>
+        <td>54321</td>
+        <td>Querétaro</td>
+        <td>Querétaro</td>
+        <td>Querétaro</td>
+        <td>Dra. Gómez</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>María</td>
+        <td>López</td>
+        <td>Rodríguez</td>
+        <td>1978-12-03</td>
+        <td>Mexicana</td>
+        <td>Femenino</td>
+        <td>LORM781203XXX</td>
+        <td>maria.lopez@example.com</td>
+        <td>B+</td>
+        <td>5555555555</td>
+        <td>Calle 789</td>
+        <td>Colonia Sur</td>
+        <td>67890</td>
+        <td>Veracruz</td>
+        <td>Veracruz</td>
+        <td>Veracruz</td>
+        <td>Dr. Hernández</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Carlos</td>
+        <td>Ramírez</td>
+        <td>Gómez</td>
+        <td>1982-09-18</td>
+        <td>Mexicana</td>
+        <td>Masculino</td>
+        <td>RAGC820918XXX</td>
+        <td>carlos.ramirez@example.com</td>
+        <td>O-</td>
+        <td>5554443333</td>
+        <td>Calle 987</td>
+        <td>Colonia Poniente</td>
+        <td>76543</td>
+        <td>Jalisco</td>
+        <td>Guadalajara</td>
+        <td>Jalisco</td>
+        <td>Dra. Martínez</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>Andrea</td>
+        <td>Herrera</td>
+        <td>Valdez</td>
+        <td>1999-10-12</td>
+        <td>Mexicana</td>
+        <td>Femenino</td>
+        <td>AHVA2563V7D62D</td>
+        <td>andrea.herrera@example.com</td>
+        <td>A+</td>
+        <td>5551112222</td>
+        <td>Calle 654</td>
+        <td>Colonia Este</td>
+        <td>98765</td>
+        <td>Baja California</td>
+        <td>Tijuana</td>
+        <td>Baja California</td>
+        <td>Dr. Sánchez</td>
+      </tr>
+    </tbody>
+  </table>
+  
 </body>
 </html>
