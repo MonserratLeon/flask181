@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Consultar pacientes</title>
+    <title>pruebas</title>
     <style>
         /* Estilos generales */
         body {
@@ -64,7 +64,8 @@
         
         /* Estilos para la barra de navegación secundaria */
         nav.secondary-navigation {
-            background-color: #fff; 
+            background-color: #3e90ee; 
+            padding: 10px;
         }
         
         nav.secondary-navigation ul {
@@ -83,18 +84,21 @@
             color: #333;
         }
         
-       /* Estilos para la barra de información lateral */
-       aside {
+        /* Estilos para la barra de información lateral */
+        aside {
             background-color: #ffffcc; 
             padding: 10px;
             width: 200px;
-            float: right; /* Alinea el aside a la derecha */
+            float: left;
         }
         
-        /* Estilos para la sección de información de prueba */
-        .info-section {
-            padding: 20px;
-            margin-right: 220px; /* Agrega un margen a la derecha para evitar superposiciones */
+        aside ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        aside ul li {
+            margin-bottom: 5px;
         }
         
         /* Estilos para el espacio de la foto */
@@ -117,6 +121,62 @@
         .info-section p {
             margin-bottom: 20px;
         }
+        /* Estilos para la barra de información lateral */
+        aside {
+            background-color: #ffffcc; 
+            padding: 10px;
+            width: 200px;
+            float: right; /* Alinea el aside a la derecha */
+        }
+        
+        /* Estilos para la sección de información de prueba */
+        .info-section {
+            padding: 20px;
+            margin-right: 220px; /* Agrega un margen a la derecha para evitar superposiciones */
+        }
+        {
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .receta {
+      width: 60%;
+      margin: 0 auto;
+      border: 1px solid #000000;
+      padding: 20px;
+    }
+
+    .receta h2 {
+      margin-top: 0;
+    }
+
+    .receta p {
+      margin-bottom: 10px;
+    }
+
+    .receta label {
+      font-weight: bold;
+    }
+
+    .receta input[type="text"],
+    .receta textarea {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+      border: none;
+      background-color: #b2e7d6;
+      resize: none;
+      pointer-events: none;
+    }
+
+    .print-button {
+      text-align: center;
+      margin-top: 20px;
+    }
+
     </style>
 </head>
 <body>
@@ -136,10 +196,11 @@
     
     <nav class="secondary-navigation">
         <ul>
-            <li><a href="#">Lista pacientes</a></li>
-            <li><a href="#">Filtro pacientes</a></li>
-            <li><a href="#">Vista pacientes</a></li>
-            <li><a href="#">Editar pacientes</a></li>
+            <li><a href="#">Registro resultados</a></li>
+            <li><a href="#">Medidas Paciente</a></li>
+            <li><a href="#">Tratamiento y Diagnóstico</a></li>
+            <li><a href="#">Estudios Especiales</a></li>
+            <li><a href="#">Receta</a></li>
         </ul>
     </nav>
     
@@ -158,11 +219,49 @@
             <li>Correo:</li>
         </ul>
     </aside>
-    
-    <div class="info-section">
-        <h2>Información de Prueba</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempor mi nec enim tempor, non eleifend velit porta. Vivamus congue magna vitae leo commodo placerat. Integer tincidunt, mauris non bibendum cursus, enim orci efficitur urna, ut ultricies elit risus a ligula. Sed congue tristique ligula vel luctus. Fusce bibendum mauris id velit feugiat, ac mattis ipsum tristique. Duis fringilla ex eget est pharetra, ac aliquam felis sollicitudin.</p>
-        <p>Quisque sodales mauris felis, id pellentesque sem dignissim et. Mauris condimentum diam nec nisl consectetur, a mattis ligula faucibus. Praesent sit amet semper mi. Curabitur interdum ultrices neque, et laoreet lacus aliquet vitae. Mauris at nibh orci. Sed ultrices consectetur metus, sit amet sollicitudin erat lacinia vel.</p>
+    <h1>Receta Médica</h1>
+    <div class="receta">
+      <h2>Datos del Paciente</h2>
+      <label for="fecha">Fecha</label>
+      <input type="text" id="fecha" name="fecha" value="2023-05-30" readonly>
+  
+      <label for="nombre">Nombre del Paciente</label>
+      <input type="text" id="nombre" name="nombre" value="Jose Juan Pérez Herrera" readonly>
+  
+      <label for="altura">Altura (cm)</label>
+      <input type="text" id="altura" name="altura" value="170" readonly>
+  
+      <label for="peso">Peso (kg)</label>
+      <input type="text" id="peso" name="peso" value="70" readonly>
+  
+      <label for="temperatura">Temperatura (°C)</label>
+      <input type="text" id="temperatura" name="temperatura" value="37.5" readonly>
+  
+      <label for="frecuencia-cardiaca">Frecuencia Cardíaca</label>
+      <input type="text" id="frecuencia-cardiaca" name="frecuencia-cardiaca" value="80" readonly>
+  
+      <label for="presion-arterial">Presión Arterial</label>
+      <input type="text" id="presion-arterial" name="presion-arterial" value="120/80" readonly>
+  
+      <label for="nivel-oxigeno">Nivel de Oxígeno</label>
+      <input type="text" id="nivel-oxigeno" name="nivel-oxigeno" value="98%" readonly>
+  
+      <h2>Diagnóstico y Tratamiento</h2>
+  
+      <label for="diagnostico">Diagnóstico</label>
+      <textarea id="diagnostico" name="diagnostico" rows="5" readonly>Diagnóstico de ejemplo: Infección respiratoria</textarea>
+  
+      <label for="tratamiento">Tratamiento</label>
+      <textarea id="tratamiento" name="tratamiento" rows="5" readonly>Tratamiento de ejemplo: Antibióticos, reposo y abundante líquido</textarea>
+  
+      <label for="nombre">Medico que atendio</label>
+      <input type="text" id="nombre" name="nombre" value="Juan Carlos Covarruvias Arredondo" readonly>
+  
     </div>
-</body>
-</html>
+
+    <div class="print-button">
+      <button onclick="window.print()">Imprimir</button>
+    </div>
+    
+  </body>
+  </html>

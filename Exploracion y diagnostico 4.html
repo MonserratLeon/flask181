@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Consultar pacientes</title>
+    <title>Exploracion y diagnostico 4</title>
     <style>
         /* Estilos generales */
         body {
@@ -64,7 +64,8 @@
         
         /* Estilos para la barra de navegación secundaria */
         nav.secondary-navigation {
-            background-color: #fff; 
+            background-color: #3e90ee; 
+            padding: 10px;
         }
         
         nav.secondary-navigation ul {
@@ -83,18 +84,21 @@
             color: #333;
         }
         
-       /* Estilos para la barra de información lateral */
-       aside {
+        /* Estilos para la barra de información lateral */
+        aside {
             background-color: #ffffcc; 
             padding: 10px;
             width: 200px;
-            float: right; /* Alinea el aside a la derecha */
+            float: left;
         }
         
-        /* Estilos para la sección de información de prueba */
-        .info-section {
-            padding: 20px;
-            margin-right: 220px; /* Agrega un margen a la derecha para evitar superposiciones */
+        aside ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        aside ul li {
+            margin-bottom: 5px;
         }
         
         /* Estilos para el espacio de la foto */
@@ -117,6 +121,51 @@
         .info-section p {
             margin-bottom: 20px;
         }
+        /* Estilos para la barra de información lateral */
+        aside {
+            background-color: #ffffcc; 
+            padding: 10px;
+            width: 200px;
+            float: right; /* Alinea el aside a la derecha */
+        }
+        
+        /* Estilos para la sección de información de prueba */
+        .info-section {
+            padding: 20px;
+            margin-right: 220px; /* Agrega un margen a la derecha para evitar superposiciones */
+        }
+        {
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      width: 50%;
+      margin: 0 auto;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 5px;
+    }
+
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      margin-top: 10px;
+    }
     </style>
 </head>
 <body>
@@ -136,10 +185,11 @@
     
     <nav class="secondary-navigation">
         <ul>
-            <li><a href="#">Lista pacientes</a></li>
-            <li><a href="#">Filtro pacientes</a></li>
-            <li><a href="#">Vista pacientes</a></li>
-            <li><a href="#">Editar pacientes</a></li>
+            <li><a href="#">Registro resultados</a></li>
+            <li><a href="#">Medidas Paciente</a></li>
+            <li><a href="#">Tratamiento y Diagnóstico</a></li>
+            <li><a href="#">Estudios Especiales</a></li>
+            <li><a href="#">Receta</a></li>
         </ul>
     </nav>
     
@@ -158,11 +208,15 @@
             <li>Correo:</li>
         </ul>
     </aside>
-    
-    <div class="info-section">
-        <h2>Información de Prueba</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempor mi nec enim tempor, non eleifend velit porta. Vivamus congue magna vitae leo commodo placerat. Integer tincidunt, mauris non bibendum cursus, enim orci efficitur urna, ut ultricies elit risus a ligula. Sed congue tristique ligula vel luctus. Fusce bibendum mauris id velit feugiat, ac mattis ipsum tristique. Duis fringilla ex eget est pharetra, ac aliquam felis sollicitudin.</p>
-        <p>Quisque sodales mauris felis, id pellentesque sem dignissim et. Mauris condimentum diam nec nisl consectetur, a mattis ligula faucibus. Praesent sit amet semper mi. Curabitur interdum ultrices neque, et laoreet lacus aliquet vitae. Mauris at nibh orci. Sed ultrices consectetur metus, sit amet sollicitudin erat lacinia vel.</p>
-    </div>
-</body>
-</html>
+    <h1>Ingresar Enfermedad Crónica</h1>
+    <form>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+  
+      <label for="descripcion">Descripción:</label>
+      <textarea id="descripcion" name="descripcion" rows="6" cols="86" required></textarea>
+  
+      <input type="submit" value="Guardar">
+    </form>
+  </body>
+  </html>
