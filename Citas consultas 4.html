@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Citas consultas</title>
+    <title>Citas consultas 4</title>
     <style>
         /* Estilos generales */
         body {
@@ -84,12 +84,12 @@
             color: #fff;
         }
         
-        /* Estilos para la barra de información lateral */
-        aside {
+       /* Estilos para la barra de información lateral */
+       aside {
             background-color: #ffffcc; 
             padding: 10px;
             width: 200px;
-            float: left;
+            float: right;
         }
         
         aside ul {
@@ -113,15 +113,33 @@
             border-radius: 50%;
         }
         
-        /* Estilos para la sección de información de prueba */
-        .info-section {
-            padding: 20px;
+        {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
         
-        .info-section p {
-            margin-bottom: 20px;
+        h1 {
+            text-align: center;
         }
         
+        table {
+            width: 80%;
+            border-collapse: collapse;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
     </style>
 </head>
 <body>
@@ -164,10 +182,38 @@
         </ul>
     </aside>
     
-    <div class="info-section">
-        <h2>Información de Prueba</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempor mi nec enim tempor, non eleifend velit porta. Vivamus congue magna vitae leo commodo placerat. Integer tincidunt, mauris non bibendum cursus, enim orci efficitur urna, ut ultricies elit risus a ligula. Sed congue tristique ligula vel luctus. Fusce bibendum mauris id velit feugiat, ac mattis ipsum tristique. Duis fringilla ex eget est pharetra, ac aliquam felis sollicitudin.</p>
-        <p>Quisque sodales mauris felis, id pellentesque sem dignissim et. Mauris condimentum diam nec nisl consectetur, a mattis ligula faucibus. Praesent sit amet semper mi. Curabitur interdum ultrices neque, et laoreet lacus aliquet vitae. Mauris at nibh orci. Sed ultrices consectetur metus, sit amet sollicitudin erat lacinia vel.</p>
-    </div>
+    <h1>Detalles de la Cita</h1>
+    <table>
+        <tbody>
+            <tr>
+                <th>Paciente:</th>
+                <td>Juan Pérez</td>
+            </tr>
+            <tr>
+                <th>Fecha de Cita:</th>
+                <td>2023-06-15</td>
+            </tr>
+            <tr>
+                <th>Médico que Atendió:</th>
+                <td>Dr. López</td>
+            </tr>
+            <tr>
+                <th>Tipo de Cita:</th>
+                <td>Consulta General</td>
+            </tr>
+            <tr>
+                <th>Teléfono Celular:</th>
+                <td>5551234567</td>
+            </tr>
+            <tr>
+                <th>Estado de Cita:</th>
+                <td>Confirmada</td>
+            </tr>
+            <tr>
+                <th>Observaciones:</th>
+                <td>Ninguna</td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>

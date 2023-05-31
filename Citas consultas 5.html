@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Citas consultas</title>
+    <title>Citas consultas 5</title>
     <style>
         /* Estilos generales */
         body {
@@ -84,12 +84,12 @@
             color: #fff;
         }
         
-        /* Estilos para la barra de información lateral */
-        aside {
+       /* Estilos para la barra de información lateral */
+       aside {
             background-color: #ffffcc; 
             padding: 10px;
             width: 200px;
-            float: left;
+            float: right;
         }
         
         aside ul {
@@ -113,15 +113,70 @@
             border-radius: 50%;
         }
         
-        /* Estilos para la sección de información de prueba */
-        .info-section {
-            padding: 20px;
+        {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
         
-        .info-section p {
-            margin-bottom: 20px;
+        h1 {
+            text-align: center;
         }
         
+        table {
+            width: 80%;
+            border-collapse: collapse;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        table {
+            width: 80%;
+            border-collapse: collapse;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        
+        th {
+            background-color: #f2f2f2;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .reprint-button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 5px 10px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -164,10 +219,55 @@
         </ul>
     </aside>
     
-    <div class="info-section">
-        <h2>Información de Prueba</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tempor mi nec enim tempor, non eleifend velit porta. Vivamus congue magna vitae leo commodo placerat. Integer tincidunt, mauris non bibendum cursus, enim orci efficitur urna, ut ultricies elit risus a ligula. Sed congue tristique ligula vel luctus. Fusce bibendum mauris id velit feugiat, ac mattis ipsum tristique. Duis fringilla ex eget est pharetra, ac aliquam felis sollicitudin.</p>
-        <p>Quisque sodales mauris felis, id pellentesque sem dignissim et. Mauris condimentum diam nec nisl consectetur, a mattis ligula faucibus. Praesent sit amet semper mi. Curabitur interdum ultrices neque, et laoreet lacus aliquet vitae. Mauris at nibh orci. Sed ultrices consectetur metus, sit amet sollicitudin erat lacinia vel.</p>
-    </div>
+    <h1>Reimprimir recetas</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Paciente</th>
+                <th>Fecha de Cita</th>
+                <th>Médico que Atendió</th>
+                <th>Opción de Reimprimir</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Juan Pérez</td>
+                <td>2023-06-15</td>
+                <td>Dr. López</td>
+                <td><button class="reprint-button" onclick="reimprimirReceta(1)">Reimprimir Receta</button></td>
+            </tr>
+            <tr>
+                <td>María González</td>
+                <td>2023-06-20</td>
+                <td>Dr. Sánchez</td>
+                <td><button class="reprint-button" onclick="reimprimirReceta(2)">Reimprimir Receta</button></td>
+            </tr>
+            <tr>
+                <td>Carlos Ramírez</td>
+                <td>2023-06-25</td>
+                <td>Dr. García</td>
+                <td><button class="reprint-button" onclick="reimprimirReceta(3)">Reimprimir Receta</button></td>
+            </tr>
+            <tr>
+                <td>Ana López</td>
+                <td>2023-07-01</td>
+                <td>Dr. Martínez</td>
+                <td><button class="reprint-button" onclick="reimprimirReceta(4)">Reimprimir Receta</button></td>
+            </tr>
+            <tr>
+                <td>Pablo Torres</td>
+                <td>2023-07-05</td>
+                <td>Dr. Rodríguez</td>
+                <td><button class="reprint-button" onclick="reimprimirReceta(5)">Reimprimir Receta</button></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <script>
+        function reimprimirReceta(citaId) {
+            // Lógica para reimprimir la receta médica de la cita con el ID especificado
+            alert("Reimprimiendo receta médica para la cita " + citaId);
+        }
+    </script>
 </body>
 </html>
