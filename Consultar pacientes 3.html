@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Consultar Pacientes 3</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Estilos para la cabecera */
+        header {
+            background-color: #87ceeb; 
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        /* Estilos para la barra de navegación principal */
+        nav.main-navigation {
+            background-color: #90ee90; 
+            padding: 10px;
+        }
+        
+        nav.main-navigation ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav.main-navigation ul li {
+            display: inline;
+        }
+        
+        nav.main-navigation ul li a {
+            text-decoration: none;
+            padding: 10px;
+            color: #fff;
+        }
+        
+        /* Estilos para los botones de la barra de navegación principal */
+        nav.main-navigation ul li a.administracion-medicos {
+            background-color: #90ee90; 
+        }
+        
+        nav.main-navigation ul li a.expediente-pacientes {
+            background-color: #ff0000; 
+        }
+        
+        nav.main-navigation ul li a.exploracion-diagnostico {
+            background-color: #0000ff; 
+        }
+        
+        nav.main-navigation ul li a.consultar-pacientes {
+            background-color: #fff; 
+            color: #333;
+        }
+        
+        nav.main-navigation ul li a.citas-consultas {
+            background-color: #ffa500; 
+        }
+        
+        /* Estilos para la barra de navegación secundaria */
+        nav.secondary-navigation {
+            background-color: #fff; 
+        }
+        
+        nav.secondary-navigation ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav.secondary-navigation ul li {
+            display: inline;
+        }
+        
+        nav.secondary-navigation ul li a {
+            text-decoration: none;
+            padding: 10px;
+            color: #333;
+        }
+        
+       /* Estilos para la barra de información lateral */
+       aside {
+            background-color: #ffffcc; 
+            padding: 10px;
+            width: 200px;
+            float: right; /* Alinea el aside a la derecha */
+        }
+        
+        /* Estilos para la sección de información de prueba */
+        .info-section {
+            padding: 20px;
+            margin-right: 220px; /* Agrega un margen a la derecha para evitar superposiciones */
+        }
+        
+        /* Estilos para el espacio de la foto */
+        .profile-picture {
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .profile-picture img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+        
+        /* Estilos para la sección de información de prueba */
+        .info-section {
+            padding: 20px;
+        }
+        
+        .info-section p {
+            margin-bottom: 20px;
+        }
+        table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+    }
+    
+    th {
+      background-color: #f2f2f2;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Consultorio Médico</h1>
+    </header>
+    
+    <nav class="main-navigation">
+        <ul>
+            <li><a href="#" class="administracion-medicos">Administración Médicos</a></li>
+            <li><a href="#" class="expediente-pacientes">Expediente Pacientes</a></li>
+            <li><a href="#" class="exploracion-diagnostico">Exploración y Diagnóstico</a></li>
+            <li><a href="#" class="consultar-pacientes">Consultar Pacientes</a></li>
+            <li><a href="#" class="citas-consultas">Citas Consultas</a></li>
+        </ul>
+    </nav>
+    
+    <nav class="secondary-navigation">
+        <ul>
+            <li><a href="#">Lista pacientes</a></li>
+            <li><a href="#">Filtro pacientes</a></li>
+            <li><a href="#">Vista pacientes</a></li>
+            <li><a href="#">Editar pacientes</a></li>
+        </ul>
+    </nav>
+    
+   
+    
+   
+    <div class="info-section">
+        <h2>Informacion de los Pacientes</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido Paterno</th>
+                    <th>Apellido Materno</th>
+                    <th>Fecha de Nacimiento</th>
+                    <th>Teléfono</th>
+                    <th>Tipo de Sangre</th>
+                    <th>Altura</th>
+                    <th>Peso</th>
+                    <th>Historial Médico</th>
+                    <th>Fecha</th>
+                    <th>Enfermedades Crónicas</th>
+                    <th>Médico que Atendió</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Juan</td>
+                    <td>Pérez</td>
+                    <td>Gómez</td>
+                    <td>1985-07-15</td>
+                    <td>5551234567</td>
+                    <td>O+</td>
+                    <td>170 cm</td>
+                    <td>70 kg</td>
+                    <td>Diabetes, Hipertensión</td>
+                    <td>2010-05-12</td>
+                    <td>Ninguna</td>
+                    <td>Dr. López</td>
+                </tr>
+                <tr>
+                    <td>María</td>
+                    <td>González</td>
+                    <td>Rodríguez</td>
+                    <td>1990-05-20</td>
+                    <td>5559876543</td>
+                    <td>A-</td>
+                    <td>165 cm</td>
+                    <td>55 kg</td>
+                    <td>Alergias</td>
+                    <td>2012-09-30</td>
+                    <td>Asma</td>
+                    <td>Dr. Sánchez</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Consultar Pacientes 2</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Estilos para la cabecera */
+        header {
+            background-color: #87ceeb; 
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        /* Estilos para la barra de navegación principal */
+        nav.main-navigation {
+            background-color: #90ee90; 
+            padding: 10px;
+        }
+        
+        nav.main-navigation ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav.main-navigation ul li {
+            display: inline;
+        }
+        
+        nav.main-navigation ul li a {
+            text-decoration: none;
+            padding: 10px;
+            color: #fff;
+        }
+        
+        /* Estilos para los botones de la barra de navegación principal */
+        nav.main-navigation ul li a.administracion-medicos {
+            background-color: #90ee90; 
+        }
+        
+        nav.main-navigation ul li a.expediente-pacientes {
+            background-color: #ff0000; 
+        }
+        
+        nav.main-navigation ul li a.exploracion-diagnostico {
+            background-color: #0000ff; 
+        }
+        
+        nav.main-navigation ul li a.consultar-pacientes {
+            background-color: #fff; 
+            color: #333;
+        }
+        
+        nav.main-navigation ul li a.citas-consultas {
+            background-color: #ffa500; 
+        }
+        
+        /* Estilos para la barra de navegación secundaria */
+        nav.secondary-navigation {
+            background-color: #fff; 
+        }
+        
+        nav.secondary-navigation ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav.secondary-navigation ul li {
+            display: inline;
+        }
+        
+        nav.secondary-navigation ul li a {
+            text-decoration: none;
+            padding: 10px;
+            color: #333;
+        }
+        
+       /* Estilos para la barra de información lateral */
+       aside {
+            background-color: #ffffcc; 
+            padding: 10px;
+            width: 200px;
+            float: right; /* Alinea el aside a la derecha */
+        }
+        
+        /* Estilos para la sección de información de prueba */
+        .info-section {
+            padding: 20px;
+            margin-right: 220px; /* Agrega un margen a la derecha para evitar superposiciones */
+        }
+        
+        /* Estilos para el espacio de la foto */
+        .profile-picture {
+            margin-top: 20px;
+            text-align: center;
+        }
+        
+        .profile-picture img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+        
+        /* Estilos para la sección de información de prueba */
+        .info-section {
+            padding: 20px;
+        }
+        
+        .info-section p {
+            margin-bottom: 20px;
+        }
+        table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+    }
+    
+    th {
+      background-color: #f2f2f2;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Consultorio Médico</h1>
+    </header>
+    
+    <nav class="main-navigation">
+        <ul>
+            <li><a href="#" class="administracion-medicos">Administración Médicos</a></li>
+            <li><a href="#" class="expediente-pacientes">Expediente Pacientes</a></li>
+            <li><a href="#" class="exploracion-diagnostico">Exploración y Diagnóstico</a></li>
+            <li><a href="#" class="consultar-pacientes">Consultar Pacientes</a></li>
+            <li><a href="#" class="citas-consultas">Citas Consultas</a></li>
+        </ul>
+    </nav>
+    
+    <nav class="secondary-navigation">
+        <ul>
+            <li><a href="#">Lista pacientes</a></li>
+            <li><a href="#">Filtro pacientes</a></li>
+            <li><a href="#">Vista pacientes</a></li>
+            <li><a href="#">Editar pacientes</a></li>
+        </ul>
+    </nav>
+    
+    <div class="info-section">
+        <h1>Filtrado de Pacientes</h1>
+        <form id="filter-form">
+            <label for="name-input">Nombre:</label>
+            <input type="text" id="name-input" name="name">
+            
+            <label for="surname-input">Apellido:</label>
+            <input type="text" id="surname-input" name="surname">
+            
+            <label for="date-input">Fecha de Nacimiento:</label>
+            <input type="date" id="date-input" name="date">
+            
+            <input type="submit" value="Filtrar">
+        </form>
+    </div>
+    
+    <table id="patients-table">
+        <thead>
+            <tr>
+                <th>N°</th>
+                <th>Nombre</th>
+                <th>Apellido Paterno</th>
+                <th>Apellido Materno</th>
+                <th>Fecha de Nacimiento</th>
+                <th>Nacionalidad</th>
+                <th>Sexo</th>
+                <th>CURP</th>
+                <th>Correo</th>
+                <th>Tipo de Sangre</th>
+                <th>Teléfono Celular</th>
+                <th>Dirección</th>
+                <th>Colonia</th>
+                <th>Código Postal</th>
+                <th>Entidad Federativa</th>
+                <th>Municipio</th>
+                <th>Estado</th>
+                <th>Médico que Atiende</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Juan</td>
+                <td>Pérez</td>
+                <td>Gómez</td>
+                <td>1985-07-15</td>
+                <td>Mexicana</td>
+                <td>Masculino</td>
+                <td>PERJ850715XXX</td>
+                <td>juan.perez@example.com</td>
+                <td>O+</td>
+                <td>5551234567</td>
+                <td>Calle 123</td>
+                <td>Colonia Centro</td>
+                <td>12345</td>
+                <td>Estado de México</td>
+                <td>Naucalpan</td>
+                <td>Estado de México</td>
+                <td>Dr. López</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>José</td>
+                <td>González</td>
+                <td>Rodríguez</td>
+                <td>1990-05-20</td>
+                <td>Mexicana</td>
+                <td>Masculino</td>
+                <td>GORJ900520XXX</td>
+                <td>jose.gonzalez@example.com</td>
+                <td>A-</td>
+                <td>5559876543</td>
+                <td>Calle 456</td>
+                <td>Colonia Norte</td>
+                <td>54321</td>
+                <td>Querétaro</td>
+                <td>Querétaro</td>
+                <td>Querétaro</td>
+                <td>Dra. Gómez</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>María</td>
+                <td>López</td>
+                <td>Rodríguez</td>
+                <td>1978-12-03</td>
+                <td>Mexicana</td>
+                <td>Femenino</td>
+                <td>LORM781203XXX</td>
+                <td>maria.lopez@example.com</td>
+                <td>B+</td>
+                <td>5555555555</td>
+                <td>Calle 789</td>
+                <td>Colonia Sur</td>
+                <td>67890</td>
+                <td>Veracruz</td>
+                <td>Veracruz</td>
+                <td>Veracruz</td>
+                <td>Dr. Hernández</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Carlos</td>
+                <td>Ramírez</td>
+                <td>Gómez</td>
+                <td>1982-09-18</td>
+                <td>Mexicana</td>
+                <td>Masculino</td>
+                <td>RAGC820918XXX</td>
+                <td>carlos.ramirez@example.com</td>
+                <td>O-</td>
+                <td>5554443333</td>
+                <td>Calle 987</td>
+                <td>Colonia Poniente</td>
+                <td>76543</td>
+                <td>Jalisco</td>
+                <td>Guadalajara</td>
+                <td>Jalisco</td>
+                <td>Dra. Martínez</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Andrea</td>
+                <td>Herrera</td>
+                <td>Valdez</td>
+                <td>1999-10-12</td>
+                <td>Mexicana</td>
+                <td>Femenino</td>
+                <td>AHVA2563V7D62D</td>
+                <td>andrea.herrera@example.com</td>
+                <td>A+</td>
+                <td>5551112222</td>
+                <td>Calle 654</td>
+                <td>Colonia Este</td>
+                <td>01234</td>
+                <td>Chihuahua</td>
+                <td>Chihuahua</td>
+                <td>Chihuahua</td>
+                <td>Dr. Sánchez</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
