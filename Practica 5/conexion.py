@@ -1,41 +1,43 @@
 #importacion del framework
-from flask import Flask,render_template,request
+from flask import Flask, render_template, request,redirect,url_for
 from flask_mysqldb import MySQL
 
-
-#inicializacion del APP
-app= Flask(__name__)
-
-#Configuracion de la conexion
+#Inicializacion del APP
+app= Flask (__name__)
 app.config['MYSQL_HOST']='localhost'
 app.config['MYSQL_USER']='root'
 app.config['MYSQL_PASSWORD']=''
 app.config['MYSQL_DB']='dbflask'
+app.secret_key= 'mysecretkey'
 mysql= MySQL(app)
 
-#declaracion de ruta http://localhost:5000
+#Declaracion de ruta http://localhost:5000
 @app.route('/')
 def index():
-    return render_template('index.html')
+  
+  return render_template('index.html')
 
-#ruta http:localhost:5000/guardar tipo POST para Insert
+#rura http:localhost:5000/guardar tipo POST para insert
 @app.route('/guardar',methods=['POST'])
 def guardar():
-    if request.method == 'POST':
-        titulo= request.form['txtTitulo']
-        artista= request.form['txtArtista']
-        anio= request.form['txtAnio']
-        print(titulo,artista,anio)
+  if request.method == 'POST':
 
-    return 'los datos llegaron Amigo ;'
+    # pasamos a variables el contenido de los input
+    Vtitulo=request.form['txtTitulo']
+    Vartista=request.form['txtArtista']
+    Vanio=request.form['txtAnio']
+   
+    #Conectar y ejecutar el insert
+    cs= mysql.connection.cursor()
+    cs.execute('insert into tbalbums (titulo,artista,anio) values(%s,%s,%s)',(Vtitulo,Vartista,Vanio))
+    mysql.connection.commit()
 
-    return "se guardo en la base de datos"
+  return redirect(url_for('index'))
 
 @app.route('/eliminar')
 def eliminar():
-    return "Se elimino en la base de datos"
+  return "Se elimino en la BD"
 
-
-#ejecucion del servidor en el puerto 5000
-if __name__ == '__main__':
-    app.run(port=5000,debug=True)
+#Ejecucion del servidor en el puerto 5000
+if __name__ == '_main_':
+  app.run(port=5000,debug=True)
