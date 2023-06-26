@@ -23,3 +23,12 @@ def expo():
 #ejecucion del servidor en el puerto 5000
 if __name__ == '__main__':
     app.run(port=5000,debug=True)
+
+    #declaracion de ruta http://localhost:5000
+    @app.route('/Administracionmedicos 2.html')
+def expo():
+    return render_template('Administracion medicos 2.html')
+
+#ejecucion del servidor en el puerto 5000
+if __name__ == '__main__':
+    app.run(port=5000,debug=True)
